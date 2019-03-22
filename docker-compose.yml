@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  # Node 10.15.3 (With AdonisJS CLI)
+  app:
+    command: ash -c "npm i -g @adonisjs/cli && npm install && npm start"
+    image: node:10.15.3-alpine
+    container_name: sandbox-app
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+    working_dir: /app
+    depends_on:
+      - mysql
+    links:
+      - mysql
+
+  # MySQL (5.7)
+  mysql:
+    image: mysql:5.7
+    container_name: sandbox-mysql
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=sandbox
+      - MYSQL_DATABASE=sandbox
+      - MYSQL_USER=sandbox
+      - MYSQL_PASSWORD=sandbox
