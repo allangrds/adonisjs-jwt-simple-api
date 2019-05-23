@@ -19,3 +19,15 @@ const Route = use('Route') // eslint-disable-line no-undef
 Route
   .post('/users', 'UserController.store')
   .validator('StoreUser')
+
+Route
+  .group(() => {
+    Route
+      .post('login', 'AuthController.login')
+      .validator('AuthUser')
+
+    Route
+      .post('logout', 'AuthController.logout')
+      .middleware(['auth'])
+  })
+  .prefix('auth')
