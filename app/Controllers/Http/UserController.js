@@ -1,6 +1,5 @@
 'use strict'
 
-const { validateAll } = use('Validator') // eslint-disable-line no-undef
 const User = use('App/Models/User')
 
 class UserController {
