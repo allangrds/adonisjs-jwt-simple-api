@@ -5,7 +5,7 @@ class StoreUser {
     return {
       username: 'required|max:40|unique:users,username',
       email: 'required|email|max:40|unique:users,email',
-      password: 'required|max:12',
+      password: 'required|min:6|max:12',
     }
   }
 
