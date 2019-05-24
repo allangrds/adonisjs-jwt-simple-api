@@ -3,7 +3,7 @@ version: '3'
 services:
   # Node (10.15.3)
   app:
-    command: ash -c "npm i -g @adonisjs/cli && npm install && sleep 10; adonis migration:run && npm start"
+    command: ash -c "npm i -g @adonisjs/cli && npm install && sleep 15; adonis migration:run && npm start"
     image: node:10.15.3-alpine
     container_name: sandbox-app
     ports:
