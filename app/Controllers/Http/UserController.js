@@ -9,7 +9,7 @@ class UserController {
 
     await User.create(data)
 
-    const token = await auth.attempt(email, password)
+    const token = await auth.withRefreshToken().attempt(email, password)
 
     return response.status(200).send(token)
   }

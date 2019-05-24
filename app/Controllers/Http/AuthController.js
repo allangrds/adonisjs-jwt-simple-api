@@ -6,7 +6,7 @@ class AuthController {
     let token
 
     try {
-      token = await auth.attempt(email, password)
+      token = await auth.withRefreshToken().attempt(email, password)
     } catch (e) {
       return response.status(401).send({'error': 'Unauthorized'})
     }
@@ -14,9 +14,20 @@ class AuthController {
     return response.status(200).send(token)
   }
 
-  //TODO Método "logout" não implementado no JWT
   async logout ({ response, auth }) {
-    await auth.logout()
+    const apiToken = auth.getAuthHeader()
+
+    await auth
+      .authenticator('jwt')
+      .revokeTokens([apiToken], true)
+
+    return response.status(200).send({message: 'Successfully logged out'})
+  }
+
+  async refresh ({ request, response, auth }) {
+    const { refresh_token: refreshToken  } = request.all()
+
+    const token = await auth.newRefreshToken().generateForRefreshToken(refreshToken)
 
     return response.status(200).send(token)
   }

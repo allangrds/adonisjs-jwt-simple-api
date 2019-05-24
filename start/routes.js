@@ -29,5 +29,9 @@ Route
     Route
       .post('logout', 'AuthController.logout')
       .middleware(['auth'])
+
+    Route
+      .post('refresh', 'AuthController.refresh')
+      .middleware(['auth'])
   })
   .prefix('auth')
