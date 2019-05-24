@@ -1,4 +1,4 @@
-up: down kill up
+start: down kill up
 
 down:
 	@docker-compose down
