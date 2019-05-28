@@ -35,3 +35,26 @@ Route
       .middleware(['auth'])
   })
   .prefix('auth')
+
+
+Route
+  .group(() => {
+    Route
+      .get('/', 'TaskController.index')
+
+    Route
+      .get('/:id', 'TaskController.show')
+
+    Route
+      .patch('/:id', 'TaskController.update')
+      .validator('UpdateTask')
+
+    Route
+      .delete('/:id', 'TaskController.destroy')
+
+    Route
+      .post('/', 'TaskController.store')
+      .validator('StoreTask')
+  })
+  .prefix('tasks')
+  .middleware(['auth'])
