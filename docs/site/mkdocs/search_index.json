@@ -1,0 +1,324 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "Welcome to Laravel JWT Simple API\n\n\nJust a study project to test api creation with Laravel.",
+            "title": "Home"
+        },
+        {
+            "location": "/#welcome-to-laravel-jwt-simple-api",
+            "text": "Just a study project to test api creation with Laravel.",
+            "title": "Welcome to Laravel JWT Simple API"
+        },
+        {
+            "location": "/user/",
+            "text": "Retrieve - \n/user\n\n\n\n\n\n\n\n\nPermission level\n\n\nURL\n\n\nMethod\n\n\nFormat\n\n\nHTTP Status Code\n\n\n\n\n\n\n\n\n\n\nUser\n\n\n/user\n\n\nGET\n\n\njson\n\n\n200\n, \n401\n\n\n\n\n\n\n\n\nHeaders\n\n\n\n\n\n\n\n\nField\n\n\nContent\n\n\n\n\n\n\n\n\n\n\nContent-Type\n\n\napplication/json\n\n\n\n\n\n\nAuthorization\n\n\nBearer \n{token}\n\n\n\n\n\n\n\n\nResponse Content\n\n\n\n\n\n\n\n\nField\n\n\nType\n\n\nDetail\n\n\n\n\n\n\n\n\n\n\nid\n\n\nInteger\n\n\nUser's id\n\n\n\n\n\n\nname\n\n\nString\n\n\nUser's name\n\n\n\n\n\n\nemail\n\n\nString\n\n\nUser's email\n\n\n\n\n\n\nemail_verified_at\n\n\nDatetime\n\n\nUser's email verification datetime\n\n\n\n\n\n\ncreated_at\n\n\nDatetime\n\n\nUser's created at\n\n\n\n\n\n\nupdated_at\n\n\nDatetime\n\n\nUser's updated at\n\n\n\n\n\n\n\n\nExample\n\n\nEvent\n: User \nPOST\n to \n/user\n\n\nHeader Content\n:\n\n\nContent-Type: application/json\nAuthorization: Bearer {token}\n\n\n\n\nHTTP Status Code\n: \n201\n\n\nResponse Content\n:\n\n\n{\n    \"id\": 1,\n    \"name\": \"Allan\",\n    \"email\": \"allan.ramos@pagar.me\",\n    \"email_verified_at\": null,\n    \"created_at\": \"2019-03-22 14:41:18\",\n    \"updated_at\": \"2019-03-22 14:41:18\"\n}",
+            "title": "User"
+        },
+        {
+            "location": "/user/#retrieve-user",
+            "text": "Permission level  URL  Method  Format  HTTP Status Code      User  /user  GET  json  200 ,  401",
+            "title": "Retrieve - /user"
+        },
+        {
+            "location": "/user/#headers",
+            "text": "Field  Content      Content-Type  application/json    Authorization  Bearer  {token}",
+            "title": "Headers"
+        },
+        {
+            "location": "/user/#response-content",
+            "text": "Field  Type  Detail      id  Integer  User's id    name  String  User's name    email  String  User's email    email_verified_at  Datetime  User's email verification datetime    created_at  Datetime  User's created at    updated_at  Datetime  User's updated at",
+            "title": "Response Content"
+        },
+        {
+            "location": "/user/#example",
+            "text": "Event : User  POST  to  /user  Header Content :  Content-Type: application/json\nAuthorization: Bearer {token}  HTTP Status Code :  201  Response Content :  {\n    \"id\": 1,\n    \"name\": \"Allan\",\n    \"email\": \"allan.ramos@pagar.me\",\n    \"email_verified_at\": null,\n    \"created_at\": \"2019-03-22 14:41:18\",\n    \"updated_at\": \"2019-03-22 14:41:18\"\n}",
+            "title": "Example"
+        },
+        {
+            "location": "/users/",
+            "text": "Create - \n/users\n\n\n\n\n\n\n\n\nPermission level\n\n\nURL\n\n\nMethod\n\n\nFormat\n\n\nHTTP Status Code\n\n\n\n\n\n\n\n\n\n\nUser\n\n\n/users\n\n\nPOST\n\n\njson\n\n\n201\n, \n400\n, \n404\n\n\n\n\n\n\n\n\nHeaders\n\n\n\n\n\n\n\n\nField\n\n\nContent\n\n\n\n\n\n\n\n\n\n\nContent-Type\n\n\napplication/json\n\n\n\n\n\n\nAuthorization\n\n\nBearer \n{token}\n\n\n\n\n\n\n\n\nRequest Content\n\n\n\n\n\n\n\n\nField\n\n\nType\n\n\nRequired\n\n\nDetail\n\n\n\n\n\n\n\n\n\n\nname\n\n\nString\n\n\nYes\n\n\nUser's name\n\n\n\n\n\n\nemail\n\n\nString\n\n\nYes\n\n\nUser's email\n\n\n\n\n\n\npassword\n\n\nString\n\n\nYes\n\n\nUser's password\n\n\n\n\n\n\n\n\nResponse Content\n\n\n\n\n\n\n\n\nField\n\n\nType\n\n\nDetail\n\n\n\n\n\n\n\n\n\n\naccess_token\n\n\nString\n\n\nUser's access token\n\n\n\n\n\n\ntoken_type\n\n\nString\n\n\nUser's token type authentication\n\n\n\n\n\n\nexpires_in\n\n\nString\n\n\nTime for a session to expire\n\n\n\n\n\n\n\n\nExample\n\n\nEvent\n: User \nPOST\n to \n/users\n\n\nHeader Content\n:\n\n\nContent-Type: application/json\nAuthorization: Bearer {token}\n\n\n\n\nBody Content\n:\n\n\n{\n    \"name\": \"Allan\",\n    \"email\": \"allan@gmail.com\",\n    \"password\": \"123\",\n}\n\n\n\n\nHTTP Status Code\n: \n201\n\n\nResponse Content\n:\n\n\n{\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL3VzZXJzIiwiaWF0IjoxNTUzMjY1Njc4LCJleHAiOjE1NTMyNjkyNzgsIm5iZiI6MTU1MzI2NTY3OCwianRpIjoieEhERW9kdm5EMG9yMHhsaCIsInN1YiI6MSwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.oaXs71UCoRr6N5B9DxLOffU0kKZMMbMw0EAgVVQqUfg\",\n    \"token_type\": \"jwt\",\n    \"expires_in\": 3600\n}\n\n\n\n\nValidations\n\n\nHTTP Status Code\n: \n400\n  \n\n\n\n\n\n\n\n\nContent\n\n\nDetail\n\n\n\n\n\n\n\n\n\n\nname\n: The name field is required.\n\n\nIt user must have a name\n\n\n\n\n\n\nemail\n: The email field is required.\n\n\nIt user must have a email\n\n\n\n\n\n\npassword\n: The password field is required.\n\n\nIt user must have a password\n\n\n\n\n\n\nname\n: The name may not be greater than 40 characters.\n\n\nIt names can't have a string greater than 40 characters\n\n\n\n\n\n\nemail\n: The email may not be greater than 40 characters.\n\n\nIt emails can't have a string greater than 40 characters\n\n\n\n\n\n\npassword\n: The password may not be greater than 12 characters.\n\n\nIt passwords can't have a string greater than 12 characters",
+            "title": "Users"
+        },
+        {
+            "location": "/users/#create-users",
+            "text": "Permission level  URL  Method  Format  HTTP Status Code      User  /users  POST  json  201 ,  400 ,  404",
+            "title": "Create - /users"
+        },
+        {
+            "location": "/users/#headers",
+            "text": "Field  Content      Content-Type  application/json    Authorization  Bearer  {token}",
+            "title": "Headers"
+        },
+        {
+            "location": "/users/#request-content",
+            "text": "Field  Type  Required  Detail      name  String  Yes  User's name    email  String  Yes  User's email    password  String  Yes  User's password",
+            "title": "Request Content"
+        },
+        {
+            "location": "/users/#response-content",
+            "text": "Field  Type  Detail      access_token  String  User's access token    token_type  String  User's token type authentication    expires_in  String  Time for a session to expire",
+            "title": "Response Content"
+        },
+        {
+            "location": "/users/#example",
+            "text": "Event : User  POST  to  /users  Header Content :  Content-Type: application/json\nAuthorization: Bearer {token}  Body Content :  {\n    \"name\": \"Allan\",\n    \"email\": \"allan@gmail.com\",\n    \"password\": \"123\",\n}  HTTP Status Code :  201  Response Content :  {\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL3VzZXJzIiwiaWF0IjoxNTUzMjY1Njc4LCJleHAiOjE1NTMyNjkyNzgsIm5iZiI6MTU1MzI2NTY3OCwianRpIjoieEhERW9kdm5EMG9yMHhsaCIsInN1YiI6MSwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.oaXs71UCoRr6N5B9DxLOffU0kKZMMbMw0EAgVVQqUfg\",\n    \"token_type\": \"jwt\",\n    \"expires_in\": 3600\n}",
+            "title": "Example"
+        },
+        {
+            "location": "/users/#validations",
+            "text": "HTTP Status Code :  400        Content  Detail      name : The name field is required.  It user must have a name    email : The email field is required.  It user must have a email    password : The password field is required.  It user must have a password    name : The name may not be greater than 40 characters.  It names can't have a string greater than 40 characters    email : The email may not be greater than 40 characters.  It emails can't have a string greater than 40 characters    password : The password may not be greater than 12 characters.  It passwords can't have a string greater than 12 characters",
+            "title": "Validations"
+        },
+        {
+            "location": "/auth/login/",
+            "text": "Login - \nauth/login\n\n\n\n\n\n\n\n\nPermission level\n\n\nURL\n\n\nMethod\n\n\nFormat\n\n\nHTTP Status Code\n\n\n\n\n\n\n\n\n\n\nAnonymous\n\n\nauth/login\n\n\nPOST\n\n\njson\n\n\n200\n, \n400\n, \n401\n\n\n\n\n\n\n\n\nHeaders\n\n\n\n\n\n\n\n\nField\n\n\nContent\n\n\n\n\n\n\n\n\n\n\nContent-Type\n\n\napplication/json\n\n\n\n\n\n\n\n\nRequest Content\n\n\n\n\n\n\n\n\nField\n\n\nType\n\n\nRequired\n\n\nDetail\n\n\n\n\n\n\n\n\n\n\nemail\n\n\nEmail field\n\n\nYes\n\n\nUser's email\n\n\n\n\n\n\npassword\n\n\nString\n\n\nYes\n\n\nUser's password\n\n\n\n\n\n\n\n\nResponse Content\n\n\n\n\n\n\n\n\nField\n\n\nType\n\n\nDetail\n\n\n\n\n\n\n\n\n\n\ntoken_type\n\n\nString\n\n\nBearer\n\n\n\n\n\n\ntoken\n\n\nString\n\n\nToken\n\n\n\n\n\n\nexpires_at\n\n\nInteger\n\n\nDatetime with exact time for the token expire\n\n\n\n\n\n\n\n\nExample\n\n\nEvent\n: Anonymous \nPOST\n to \n/auth/login/\n\n\nHeader Content\n:\n\n\nContent-Type: application/json\n\n\n\n\nBody Content\n: \n\n\n{\n    \"email\": \"jonhdoeqa@email.com\",\n    \"password\": \"1234ABCD\"\n}\n\n\n\n\n\nHTTP Status Code\n: \n200\n\n\nResponse Content\n:\n\n\n{\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImZhMWZlY2E2OWFhMmVmZWQ3MzA4MmViNDk0NDMyOGEzNDEwMDEyYmIxOTQ1MDRlMTc2MDc5MWNjYjJkNWY3ZmFlNjllOGU5MzFhMjMzYmVjIn0.eyJhdWQiOiIxIiwianRpIjoiZmExZmVjYTY5YWEyZWZlZDczMDgyZWI0OTQ0MzI4YTM0MTAwMTJiYjE5NDUwNGUxNzYwNzkxY2NiMmQ1ZjdmYWU2OWU4ZTkzMWEyMzNiZWMiLCJpYXQiOjE1NTIyMjY0MjcsIm5iZiI6MTU1MjIyNjQyNywiZXhwIjoxNTgzODQ4ODI3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.kRm4vXYuRHTmuGkMSCa1pqgnN1smKPKA6JR5PGwJxtZ7PCMQCLgf-3FTBUexDetZDITIDbX43Erd-Ul3l_gBiA1mtZWh9oE-_QFNTKPg71yHUeu6RmmMhmPrWgeZmJjubyXXtnICERnn1fEi0DC-20ZWROA7juPneUHOdp4Mofnp5z8UMcF2TjkHLRo_YOgxmGkS8uwtI4vaQqojdpZWAWy7egip5mgDglbxqmKjjuhn1GgkZsks-B166Hy-xX-F5EKnSzlnAD4TdUw7bgV52cnvuE8cIWPeHnpKAZjpfbX5xysRHeGLFWlTZbM25LOJIhpkVqFPYXy3R8S101MF-1r3K6cdHFUHisYYfYZnSo3X_g3qj1dxWfqH_awZopPFWn8IavK8l0p5SmpO31exh0kwLDsk-WCWYWN9ItTjhmXIn70hoD4fWMvpitD0sDjtaCPeaqK2E07FVWwclUiFlr1s0LY5RS0VIS_fCjaJysed9tgpOmjte5yhtKTD5xUAhwMghgVXfLqbYMX3hUfggW3ZtinUT_IKNKq8CkobW2GI5elRNtpOn0EMPLw5U63SxlBwXRn_WkyL4ihChEtu97V24p7LQOLMBpLkHDC1kIhnRDHPKDVajB11pk6MYlOGbHQeH0syg-F8n-Js5TpGX3N3rMxeMznZ00RE_5JtXS0\",\n    \"token_type\": \"bearer\",\n    \"expires_at\": \"3600\"\n}\n\n\n\n\nValidations\n\n\nHTTP Status Code\n: \n400\n  \n\n\n\n\n\n\n\n\nContent\n\n\nDetail\n\n\n\n\n\n\n\n\n\n\nemail\n: The email field is required.\n\n\nIt user must have a email\n\n\n\n\n\n\npassword\n: The password field is required.\n\n\nIt user must have a password\n\n\n\n\n\n\nemail\n: The email may not be greater than 40 characters.\n\n\nIt emails can't have a string greater than 40 characters\n\n\n\n\n\n\npassword\n: The password may not be greater than 12 characters.\n\n\nIt passwords can't have a string greater than 12 characters",
+            "title": "Login"
+        },
+        {
+            "location": "/auth/login/#login-authlogin",
+            "text": "Permission level  URL  Method  Format  HTTP Status Code      Anonymous  auth/login  POST  json  200 ,  400 ,  401",
+            "title": "Login - auth/login"
+        },
+        {
+            "location": "/auth/login/#headers",
+            "text": "Field  Content      Content-Type  application/json",
+            "title": "Headers"
+        },
+        {
+            "location": "/auth/login/#request-content",
+            "text": "Field  Type  Required  Detail      email  Email field  Yes  User's email    password  String  Yes  User's password",
+            "title": "Request Content"
+        },
+        {
+            "location": "/auth/login/#response-content",
+            "text": "Field  Type  Detail      token_type  String  Bearer    token  String  Token    expires_at  Integer  Datetime with exact time for the token expire",
+            "title": "Response Content"
+        },
+        {
+            "location": "/auth/login/#example",
+            "text": "Event : Anonymous  POST  to  /auth/login/  Header Content :  Content-Type: application/json  Body Content :   {\n    \"email\": \"jonhdoeqa@email.com\",\n    \"password\": \"1234ABCD\"\n}  HTTP Status Code :  200  Response Content :  {\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImZhMWZlY2E2OWFhMmVmZWQ3MzA4MmViNDk0NDMyOGEzNDEwMDEyYmIxOTQ1MDRlMTc2MDc5MWNjYjJkNWY3ZmFlNjllOGU5MzFhMjMzYmVjIn0.eyJhdWQiOiIxIiwianRpIjoiZmExZmVjYTY5YWEyZWZlZDczMDgyZWI0OTQ0MzI4YTM0MTAwMTJiYjE5NDUwNGUxNzYwNzkxY2NiMmQ1ZjdmYWU2OWU4ZTkzMWEyMzNiZWMiLCJpYXQiOjE1NTIyMjY0MjcsIm5iZiI6MTU1MjIyNjQyNywiZXhwIjoxNTgzODQ4ODI3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.kRm4vXYuRHTmuGkMSCa1pqgnN1smKPKA6JR5PGwJxtZ7PCMQCLgf-3FTBUexDetZDITIDbX43Erd-Ul3l_gBiA1mtZWh9oE-_QFNTKPg71yHUeu6RmmMhmPrWgeZmJjubyXXtnICERnn1fEi0DC-20ZWROA7juPneUHOdp4Mofnp5z8UMcF2TjkHLRo_YOgxmGkS8uwtI4vaQqojdpZWAWy7egip5mgDglbxqmKjjuhn1GgkZsks-B166Hy-xX-F5EKnSzlnAD4TdUw7bgV52cnvuE8cIWPeHnpKAZjpfbX5xysRHeGLFWlTZbM25LOJIhpkVqFPYXy3R8S101MF-1r3K6cdHFUHisYYfYZnSo3X_g3qj1dxWfqH_awZopPFWn8IavK8l0p5SmpO31exh0kwLDsk-WCWYWN9ItTjhmXIn70hoD4fWMvpitD0sDjtaCPeaqK2E07FVWwclUiFlr1s0LY5RS0VIS_fCjaJysed9tgpOmjte5yhtKTD5xUAhwMghgVXfLqbYMX3hUfggW3ZtinUT_IKNKq8CkobW2GI5elRNtpOn0EMPLw5U63SxlBwXRn_WkyL4ihChEtu97V24p7LQOLMBpLkHDC1kIhnRDHPKDVajB11pk6MYlOGbHQeH0syg-F8n-Js5TpGX3N3rMxeMznZ00RE_5JtXS0\",\n    \"token_type\": \"bearer\",\n    \"expires_at\": \"3600\"\n}",
+            "title": "Example"
+        },
+        {
+            "location": "/auth/login/#validations",
+            "text": "HTTP Status Code :  400        Content  Detail      email : The email field is required.  It user must have a email    password : The password field is required.  It user must have a password    email : The email may not be greater than 40 characters.  It emails can't have a string greater than 40 characters    password : The password may not be greater than 12 characters.  It passwords can't have a string greater than 12 characters",
+            "title": "Validations"
+        },
+        {
+            "location": "/auth/logout/",
+            "text": "Logout - \nauth/logout\n\n\n\n\n\n\n\n\nPermission level\n\n\nURL\n\n\nMethod\n\n\nFormat\n\n\nHTTP Status Code\n\n\n\n\n\n\n\n\n\n\nUser\n\n\nauth/logout\n\n\nPOST\n\n\njson\n\n\n200\n, \n400\n\n\n\n\n\n\n\n\nHeaders\n\n\n\n\n\n\n\n\nField\n\n\nContent\n\n\n\n\n\n\n\n\n\n\nContent-Type\n\n\napplication/json\n\n\n\n\n\n\nAuthorization\n\n\nBearer \n{token}\n\n\n\n\n\n\n\n\nResponse Content\n\n\n\n\n\n\n\n\nField\n\n\nType\n\n\nDetail\n\n\n\n\n\n\n\n\n\n\nmessage\n\n\nString\n\n\nSuccessfully logged out",
+            "title": "Logout"
+        },
+        {
+            "location": "/auth/logout/#logout-authlogout",
+            "text": "Permission level  URL  Method  Format  HTTP Status Code      User  auth/logout  POST  json  200 ,  400",
+            "title": "Logout - auth/logout"
+        },
+        {
+            "location": "/auth/logout/#headers",
+            "text": "Field  Content      Content-Type  application/json    Authorization  Bearer  {token}",
+            "title": "Headers"
+        },
+        {
+            "location": "/auth/logout/#response-content",
+            "text": "Field  Type  Detail      message  String  Successfully logged out",
+            "title": "Response Content"
+        },
+        {
+            "location": "/auth/refresh/",
+            "text": "Login - \nauth/refresh\n\n\n\n\n\n\n\n\nPermission level\n\n\nURL\n\n\nMethod\n\n\nFormat\n\n\nHTTP Status Code\n\n\n\n\n\n\n\n\n\n\nAnonymous\n\n\nauth/refresh\n\n\nGET\n\n\njson\n\n\n200\n, \n401\n\n\n\n\n\n\n\n\nHeaders\n\n\n\n\n\n\n\n\nField\n\n\nContent\n\n\n\n\n\n\n\n\n\n\nContent-Type\n\n\napplication/json\n\n\n\n\n\n\nAuthorization\n\n\nBearer \n{token}\n\n\n\n\n\n\n\n\nResponse Content\n\n\n\n\n\n\n\n\nField\n\n\nType\n\n\nDetail\n\n\n\n\n\n\n\n\n\n\ntoken_type\n\n\nString\n\n\nBearer\n\n\n\n\n\n\ntoken\n\n\nString\n\n\nToken\n\n\n\n\n\n\nexpires_at\n\n\nInteger\n\n\nDatetime with exact time for the token expire\n\n\n\n\n\n\n\n\nExample\n\n\nEvent\n: Anonymous \nPOST\n to \n/auth/refresh/\n\n\nHeader Content\n:\n\n\nContent-Type: application/json\nAuthorization: Bearer {token}\n\n\n\n\nHTTP Status Code\n: \n200\n\n\nResponse Content\n:\n\n\n{\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImZhMWZlY2E2OWFhMmVmZWQ3MzA4MmViNDk0NDMyOGEzNDEwMDEyYmIxOTQ1MDRlMTc2MDc5MWNjYjJkNWY3ZmFlNjllOGU5MzFhMjMzYmVjIn0.eyJhdWQiOiIxIiwianRpIjoiZmExZmVjYTY5YWEyZWZlZDczMDgyZWI0OTQ0MzI4YTM0MTAwMTJiYjE5NDUwNGUxNzYwNzkxY2NiMmQ1ZjdmYWU2OWU4ZTkzMWEyMzNiZWMiLCJpYXQiOjE1NTIyMjY0MjcsIm5iZiI6MTU1MjIyNjQyNywiZXhwIjoxNTgzODQ4ODI3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.kRm4vXYuRHTmuGkMSCa1pqgnN1smKPKA6JR5PGwJxtZ7PCMQCLgf-3FTBUexDetZDITIDbX43Erd-Ul3l_gBiA1mtZWh9oE-_QFNTKPg71yHUeu6RmmMhmPrWgeZmJjubyXXtnICERnn1fEi0DC-20ZWROA7juPneUHOdp4Mofnp5z8UMcF2TjkHLRo_YOgxmGkS8uwtI4vaQqojdpZWAWy7egip5mgDglbxqmKjjuhn1GgkZsks-B166Hy-xX-F5EKnSzlnAD4TdUw7bgV52cnvuE8cIWPeHnpKAZjpfbX5xysRHeGLFWlTZbM25LOJIhpkVqFPYXy3R8S101MF-1r3K6cdHFUHisYYfYZnSo3X_g3qj1dxWfqH_awZopPFWn8IavK8l0p5SmpO31exh0kwLDsk-WCWYWN9ItTjhmXIn70hoD4fWMvpitD0sDjtaCPeaqK2E07FVWwclUiFlr1s0LY5RS0VIS_fCjaJysed9tgpOmjte5yhtKTD5xUAhwMghgVXfLqbYMX3hUfggW3ZtinUT_IKNKq8CkobW2GI5elRNtpOn0EMPLw5U63SxlBwXRn_WkyL4ihChEtu97V24p7LQOLMBpLkHDC1kIhnRDHPKDVajB11pk6MYlOGbHQeH0syg-F8n-Js5TpGX3N3rMxeMznZ00RE_5JtXS0\",\n    \"token_type\": \"bearer\",\n    \"expires_at\": \"3600\"\n}",
+            "title": "Refresh"
+        },
+        {
+            "location": "/auth/refresh/#login-authrefresh",
+            "text": "Permission level  URL  Method  Format  HTTP Status Code      Anonymous  auth/refresh  GET  json  200 ,  401",
+            "title": "Login - auth/refresh"
+        },
+        {
+            "location": "/auth/refresh/#headers",
+            "text": "Field  Content      Content-Type  application/json    Authorization  Bearer  {token}",
+            "title": "Headers"
+        },
+        {
+            "location": "/auth/refresh/#response-content",
+            "text": "Field  Type  Detail      token_type  String  Bearer    token  String  Token    expires_at  Integer  Datetime with exact time for the token expire",
+            "title": "Response Content"
+        },
+        {
+            "location": "/auth/refresh/#example",
+            "text": "Event : Anonymous  POST  to  /auth/refresh/  Header Content :  Content-Type: application/json\nAuthorization: Bearer {token}  HTTP Status Code :  200  Response Content :  {\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImZhMWZlY2E2OWFhMmVmZWQ3MzA4MmViNDk0NDMyOGEzNDEwMDEyYmIxOTQ1MDRlMTc2MDc5MWNjYjJkNWY3ZmFlNjllOGU5MzFhMjMzYmVjIn0.eyJhdWQiOiIxIiwianRpIjoiZmExZmVjYTY5YWEyZWZlZDczMDgyZWI0OTQ0MzI4YTM0MTAwMTJiYjE5NDUwNGUxNzYwNzkxY2NiMmQ1ZjdmYWU2OWU4ZTkzMWEyMzNiZWMiLCJpYXQiOjE1NTIyMjY0MjcsIm5iZiI6MTU1MjIyNjQyNywiZXhwIjoxNTgzODQ4ODI3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.kRm4vXYuRHTmuGkMSCa1pqgnN1smKPKA6JR5PGwJxtZ7PCMQCLgf-3FTBUexDetZDITIDbX43Erd-Ul3l_gBiA1mtZWh9oE-_QFNTKPg71yHUeu6RmmMhmPrWgeZmJjubyXXtnICERnn1fEi0DC-20ZWROA7juPneUHOdp4Mofnp5z8UMcF2TjkHLRo_YOgxmGkS8uwtI4vaQqojdpZWAWy7egip5mgDglbxqmKjjuhn1GgkZsks-B166Hy-xX-F5EKnSzlnAD4TdUw7bgV52cnvuE8cIWPeHnpKAZjpfbX5xysRHeGLFWlTZbM25LOJIhpkVqFPYXy3R8S101MF-1r3K6cdHFUHisYYfYZnSo3X_g3qj1dxWfqH_awZopPFWn8IavK8l0p5SmpO31exh0kwLDsk-WCWYWN9ItTjhmXIn70hoD4fWMvpitD0sDjtaCPeaqK2E07FVWwclUiFlr1s0LY5RS0VIS_fCjaJysed9tgpOmjte5yhtKTD5xUAhwMghgVXfLqbYMX3hUfggW3ZtinUT_IKNKq8CkobW2GI5elRNtpOn0EMPLw5U63SxlBwXRn_WkyL4ihChEtu97V24p7LQOLMBpLkHDC1kIhnRDHPKDVajB11pk6MYlOGbHQeH0syg-F8n-Js5TpGX3N3rMxeMznZ00RE_5JtXS0\",\n    \"token_type\": \"bearer\",\n    \"expires_at\": \"3600\"\n}",
+            "title": "Example"
+        },
+        {
+            "location": "/tasks/create/",
+            "text": "Create - \n/tasks\n\n\n\n\n\n\n\n\nPermission level\n\n\nURL\n\n\nMethod\n\n\nFormat\n\n\nHTTP Status Code\n\n\n\n\n\n\n\n\n\n\nUser\n\n\n/tasks\n\n\nPOST\n, \nGET\n\n\njson\n\n\n201\n, \n400\n\n\n\n\n\n\n\n\nHeaders\n\n\n\n\n\n\n\n\nField\n\n\nContent\n\n\n\n\n\n\n\n\n\n\nContent-Type\n\n\napplication/json\n\n\n\n\n\n\nAuthorization\n\n\nBearer \n{token}\n\n\n\n\n\n\n\n\nRequest Content\n\n\n\n\n\n\n\n\nField\n\n\nType\n\n\nRequired\n\n\nDetail\n\n\n\n\n\n\n\n\n\n\ntitle\n\n\nString\n\n\nYes\n\n\nTask's title\n\n\n\n\n\n\ndescription\n\n\nString\n\n\nYes\n\n\nTask's description\n\n\n\n\n\n\n\n\nResponse Content\n\n\n\n\n\n\n\n\nField\n\n\nType\n\n\nDetail\n\n\n\n\n\n\n\n\n\n\nid\n\n\nInteger\n\n\nTask's id\n\n\n\n\n\n\ntitle\n\n\nString\n\n\nTask's title\n\n\n\n\n\n\ndescription\n\n\nString\n\n\nTask's description\n\n\n\n\n\n\ncreated_at\n\n\nString\n\n\nTask's created_at\n\n\n\n\n\n\nupdated_at\n\n\nString\n\n\nTask's updated_at\n\n\n\n\n\n\n\n\nExample\n\n\nEvent\n: User \nPOST\n to \n/tasks\n\n\nHeader Content\n:\n\n\nContent-Type: application/json\nAuthorization: Bearer {token}\n\n\n\n\nBody Content\n:\n\n\n{\n    \"title\": \"This is a title\",\n    \"description\": \"This is a description\",\n}\n\n\n\n\nHTTP Status Code\n: \n201\n\n\nResponse Content\n:\n\n\n{\n    \"title\": \"This is a title\",\n    \"description\": \"This is a description\",\n    \"updated_at\": \"2019-03-10 14:21:17\",\n    \"created_at\": \"2019-03-10 14:21:17\",\n    \"id\": 12\n}\n\n\n\n\nValidations\n\n\nHTTP Status Code\n: \n400\n  \n\n\n\n\n\n\n\n\nContent\n\n\nDetail\n\n\n\n\n\n\n\n\n\n\ntitle\n: The title field is required.\n\n\nIt task must have a title\n\n\n\n\n\n\ndescription\n: The description field is required.\n\n\nIt task must have a description\n\n\n\n\n\n\ntitle\n: The title may not be greater than 50 characters.\n\n\nIt titles can't have a string greater than 50 characters\n\n\n\n\n\n\ndescription\n: The description may not be greater than 255 characters.\n\n\nIt descriptions can't have a string greater than 255 characters",
+            "title": "Create"
+        },
+        {
+            "location": "/tasks/create/#create-tasks",
+            "text": "Permission level  URL  Method  Format  HTTP Status Code      User  /tasks  POST ,  GET  json  201 ,  400",
+            "title": "Create - /tasks"
+        },
+        {
+            "location": "/tasks/create/#headers",
+            "text": "Field  Content      Content-Type  application/json    Authorization  Bearer  {token}",
+            "title": "Headers"
+        },
+        {
+            "location": "/tasks/create/#request-content",
+            "text": "Field  Type  Required  Detail      title  String  Yes  Task's title    description  String  Yes  Task's description",
+            "title": "Request Content"
+        },
+        {
+            "location": "/tasks/create/#response-content",
+            "text": "Field  Type  Detail      id  Integer  Task's id    title  String  Task's title    description  String  Task's description    created_at  String  Task's created_at    updated_at  String  Task's updated_at",
+            "title": "Response Content"
+        },
+        {
+            "location": "/tasks/create/#example",
+            "text": "Event : User  POST  to  /tasks  Header Content :  Content-Type: application/json\nAuthorization: Bearer {token}  Body Content :  {\n    \"title\": \"This is a title\",\n    \"description\": \"This is a description\",\n}  HTTP Status Code :  201  Response Content :  {\n    \"title\": \"This is a title\",\n    \"description\": \"This is a description\",\n    \"updated_at\": \"2019-03-10 14:21:17\",\n    \"created_at\": \"2019-03-10 14:21:17\",\n    \"id\": 12\n}",
+            "title": "Example"
+        },
+        {
+            "location": "/tasks/create/#validations",
+            "text": "HTTP Status Code :  400        Content  Detail      title : The title field is required.  It task must have a title    description : The description field is required.  It task must have a description    title : The title may not be greater than 50 characters.  It titles can't have a string greater than 50 characters    description : The description may not be greater than 255 characters.  It descriptions can't have a string greater than 255 characters",
+            "title": "Validations"
+        },
+        {
+            "location": "/tasks/delete/",
+            "text": "Delete - \n/tasks/{id}\n\n\n\n\n\n\n\n\nPermission level\n\n\nURL\n\n\nMethod\n\n\nFormat\n\n\nHTTP Status Code\n\n\n\n\n\n\n\n\n\n\nUser\n\n\n/tasks/{id}\n\n\nDELETE\n\n\njson\n\n\n204\n \n404\n\n\n\n\n\n\n\n\nHeaders\n\n\n\n\n\n\n\n\nField\n\n\nContent\n\n\n\n\n\n\n\n\n\n\nContent-Type\n\n\napplication/json\n\n\n\n\n\n\nAuthorization\n\n\nBearer \n{token}\n\n\n\n\n\n\n\n\nExample\n\n\nEvent\n: User \nDELETE\n to \n/tasks/12\n\n\nHeader Content\n:\n\n\nContent-Type: application/json\nAuthorization: Bearer {token}\n\n\n\n\nBody Content\n: \nNone\n\n\nHTTP Status Code\n: \n204\n\n\nResponse Content\n: \nNone\n\n\nValidations\n\n\nHTTP Status Code\n: \n404\n  \n\n\n\n\n\n\n\n\nContent\n\n\nDetail\n\n\n\n\n\n\n\n\n\n\nid\n: The task does not exists\n\n\nThe task was not found in the database",
+            "title": "Delete"
+        },
+        {
+            "location": "/tasks/delete/#delete-tasksid",
+            "text": "Permission level  URL  Method  Format  HTTP Status Code      User  /tasks/{id}  DELETE  json  204   404",
+            "title": "Delete - /tasks/{id}"
+        },
+        {
+            "location": "/tasks/delete/#headers",
+            "text": "Field  Content      Content-Type  application/json    Authorization  Bearer  {token}",
+            "title": "Headers"
+        },
+        {
+            "location": "/tasks/delete/#example",
+            "text": "Event : User  DELETE  to  /tasks/12  Header Content :  Content-Type: application/json\nAuthorization: Bearer {token}  Body Content :  None  HTTP Status Code :  204  Response Content :  None",
+            "title": "Example"
+        },
+        {
+            "location": "/tasks/delete/#validations",
+            "text": "HTTP Status Code :  404        Content  Detail      id : The task does not exists  The task was not found in the database",
+            "title": "Validations"
+        },
+        {
+            "location": "/tasks/get_all/",
+            "text": "Get All - \n/tasks\n\n\n\n\n\n\n\n\nPermission level\n\n\nURL\n\n\nMethod\n\n\nFormat\n\n\nHTTP Status Code\n\n\n\n\n\n\n\n\n\n\nUser\n\n\n/tasks\n\n\nGET\n\n\njson\n\n\n200\n \n400\n\n\n\n\n\n\n\n\nHeaders\n\n\n\n\n\n\n\n\nField\n\n\nContent\n\n\n\n\n\n\n\n\n\n\nContent-Type\n\n\napplication/json\n\n\n\n\n\n\nAuthorization\n\n\nBearer \n{token}\n\n\n\n\n\n\n\n\nQuery String\n\n\n\n\n\n\n\n\nField\n\n\nAllow Value\n\n\n\n\n\n\n\n\n\n\ntitle\n\n\nAnyone\n\n\n\n\n\n\ndescription\n\n\nAnyone\n\n\n\n\n\n\norder_by\n\n\ntitle, -title, description, -description\n\n\n\n\n\n\n\n\nExample 1 (Simple GET)\n\n\nEvent\n: User \nGET\n to \n/tasks\n\n\nHeader Content\n: \nNone\n\n\nBody Content\n: \nNone\n\n\nHTTP Status Code\n: \n200\n\n\nResponse Content\n:\n\n\n{\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": 15,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 123456789\",\n            \"created_at\": \"2019-03-22 15:37:12\",\n            \"updated_at\": \"2019-03-22 15:37:12\"\n        },\n        {\n            \"id\": 14,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 12345678\",\n            \"created_at\": \"2019-03-22 15:37:12\",\n            \"updated_at\": \"2019-03-22 15:37:12\"\n        },\n        {\n            \"id\": 13,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 1234567\",\n            \"created_at\": \"2019-03-22 15:37:11\",\n            \"updated_at\": \"2019-03-22 15:37:11\"\n        },\n        {\n            \"id\": 12,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 123456\",\n            \"created_at\": \"2019-03-22 15:37:10\",\n            \"updated_at\": \"2019-03-22 15:37:10\"\n        },\n        {\n            \"id\": 11,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 12345\",\n            \"created_at\": \"2019-03-22 15:37:09\",\n            \"updated_at\": \"2019-03-22 15:37:09\"\n        },\n        {\n            \"id\": 10,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 1234\",\n            \"created_at\": \"2019-03-22 15:37:08\",\n            \"updated_at\": \"2019-03-22 15:37:08\"\n        },\n        {\n            \"id\": 9,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 123\",\n            \"created_at\": \"2019-03-22 15:37:07\",\n            \"updated_at\": \"2019-03-22 15:37:07\"\n        },\n        {\n            \"id\": 8,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 12\",\n            \"created_at\": \"2019-03-22 15:37:06\",\n            \"updated_at\": \"2019-03-22 15:37:06\"\n        },\n        {\n            \"id\": 7,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 1\",\n            \"created_at\": \"2019-03-22 15:37:05\",\n            \"updated_at\": \"2019-03-22 15:37:05\"\n        },\n        {\n            \"id\": 6,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task\",\n            \"created_at\": \"2019-03-22 15:37:02\",\n            \"updated_at\": \"2019-03-22 15:37:02\"\n        }\n    ],\n    \"first_page_url\": \"http://localhost/tasks?page=1\",\n    \"from\": 1,\n    \"last_page\": 2,\n    \"last_page_url\": \"http://localhost/tasks?page=2\",\n    \"next_page_url\": \"http://localhost/tasks?page=2\",\n    \"path\": \"http://localhost/tasks\",\n    \"per_page\": 10,\n    \"prev_page_url\": null,\n    \"to\": 10,\n    \"total\": 15\n}\n\n\n\n\nExample 2 (Filter by title)\n\n\nEvent\n: User \nGET\n to \n/tasks?title=T\u00edtulo 312345\n\n\nHeader Content\n: \nNone\n\n\nBody Content\n: \nNone\n\n\nHTTP Status Code\n: \n200\n\n\nResponse Content\n:\n\n\n{\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": 15,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 123456789\",\n            \"created_at\": \"2019-03-22 15:37:12\",\n            \"updated_at\": \"2019-03-22 15:37:12\"\n        },\n        {\n            \"id\": 14,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 12345678\",\n            \"created_at\": \"2019-03-22 15:37:12\",\n            \"updated_at\": \"2019-03-22 15:37:12\"\n        },\n        {\n            \"id\": 13,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 1234567\",\n            \"created_at\": \"2019-03-22 15:37:11\",\n            \"updated_at\": \"2019-03-22 15:37:11\"\n        },\n        {\n            \"id\": 12,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 123456\",\n            \"created_at\": \"2019-03-22 15:37:10\",\n            \"updated_at\": \"2019-03-22 15:37:10\"\n        },\n        {\n            \"id\": 11,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 12345\",\n            \"created_at\": \"2019-03-22 15:37:09\",\n            \"updated_at\": \"2019-03-22 15:37:09\"\n        },\n        {\n            \"id\": 10,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 1234\",\n            \"created_at\": \"2019-03-22 15:37:08\",\n            \"updated_at\": \"2019-03-22 15:37:08\"\n        },\n        {\n            \"id\": 9,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 123\",\n            \"created_at\": \"2019-03-22 15:37:07\",\n            \"updated_at\": \"2019-03-22 15:37:07\"\n        },\n        {\n            \"id\": 8,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 12\",\n            \"created_at\": \"2019-03-22 15:37:06\",\n            \"updated_at\": \"2019-03-22 15:37:06\"\n        },\n        {\n            \"id\": 7,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 1\",\n            \"created_at\": \"2019-03-22 15:37:05\",\n            \"updated_at\": \"2019-03-22 15:37:05\"\n        },\n        {\n            \"id\": 6,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task\",\n            \"created_at\": \"2019-03-22 15:37:02\",\n            \"updated_at\": \"2019-03-22 15:37:02\"\n        }\n    ],\n    \"first_page_url\": \"http://localhost/tasks?page=1\",\n    \"from\": 1,\n    \"last_page\": 1,\n    \"last_page_url\": \"http://localhost/tasks?page=1\",\n    \"next_page_url\": null,\n    \"path\": \"http://localhost/tasks\",\n    \"per_page\": 10,\n    \"prev_page_url\": null,\n    \"to\": 10,\n    \"total\": 10\n}\n\n\n\n\nExample 3 (Filter by description)\n\n\nEvent\n: User \nGET\n to \n/tasks?description=Descri\u00e7\u00e3o da task 12345678\n \n\nHeader Content\n: \nNone\n\n\nBody Content\n: \nNone\n\n\nHTTP Status Code\n: \n200\n\n\nResponse Content\n:\n\n\n{\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": 14,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 12345678\",\n            \"created_at\": \"2019-03-22 15:37:12\",\n            \"updated_at\": \"2019-03-22 15:37:12\"\n        }\n    ],\n    \"first_page_url\": \"http://localhost/tasks?page=1\",\n    \"from\": 1,\n    \"last_page\": 1,\n    \"last_page_url\": \"http://localhost/tasks?page=1\",\n    \"next_page_url\": null,\n    \"path\": \"http://localhost/tasks\",\n    \"per_page\": 10,\n    \"prev_page_url\": null,\n    \"to\": 1,\n    \"total\": 1\n}\n\n\n\n\nExample 3 (Order by ASC title)\n\n\nEvent\n: User \nGET\n to \n/tasks?order_by=title\n \n\nHeader Content\n: \nNone\n\n\nBody Content\n: \nNone\n\n\nHTTP Status Code\n: \n200\n\n\nResponse Content\n:\n\n\n{\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"T\u00edtulo 3\",\n            \"description\": \"Descri\u00e7\u00e3o da task\",\n            \"created_at\": \"2019-03-22 15:36:51\",\n            \"updated_at\": \"2019-03-22 15:36:51\"\n        },\n        {\n            \"id\": 2,\n            \"title\": \"T\u00edtulo 31\",\n            \"description\": \"Descri\u00e7\u00e3o da task\",\n            \"created_at\": \"2019-03-22 15:36:58\",\n            \"updated_at\": \"2019-03-22 15:36:58\"\n        },\n        {\n            \"id\": 3,\n            \"title\": \"T\u00edtulo 312\",\n            \"description\": \"Descri\u00e7\u00e3o da task\",\n            \"created_at\": \"2019-03-22 15:36:59\",\n            \"updated_at\": \"2019-03-22 15:36:59\"\n        },\n        {\n            \"id\": 4,\n            \"title\": \"T\u00edtulo 3123\",\n            \"description\": \"Descri\u00e7\u00e3o da task\",\n            \"created_at\": \"2019-03-22 15:37:00\",\n            \"updated_at\": \"2019-03-22 15:37:00\"\n        },\n        {\n            \"id\": 5,\n            \"title\": \"T\u00edtulo 31234\",\n            \"description\": \"Descri\u00e7\u00e3o da task\",\n            \"created_at\": \"2019-03-22 15:37:01\",\n            \"updated_at\": \"2019-03-22 15:37:01\"\n        },\n        {\n            \"id\": 6,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task\",\n            \"created_at\": \"2019-03-22 15:37:02\",\n            \"updated_at\": \"2019-03-22 15:37:02\"\n        },\n        {\n            \"id\": 7,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 1\",\n            \"created_at\": \"2019-03-22 15:37:05\",\n            \"updated_at\": \"2019-03-22 15:37:05\"\n        },\n        {\n            \"id\": 8,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 12\",\n            \"created_at\": \"2019-03-22 15:37:06\",\n            \"updated_at\": \"2019-03-22 15:37:06\"\n        },\n        {\n            \"id\": 9,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 123\",\n            \"created_at\": \"2019-03-22 15:37:07\",\n            \"updated_at\": \"2019-03-22 15:37:07\"\n        },\n        {\n            \"id\": 10,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 1234\",\n            \"created_at\": \"2019-03-22 15:37:08\",\n            \"updated_at\": \"2019-03-22 15:37:08\"\n        }\n    ],\n    \"first_page_url\": \"http://localhost/tasks?page=1\",\n    \"from\": 1,\n    \"last_page\": 2,\n    \"last_page_url\": \"http://localhost/tasks?page=2\",\n    \"next_page_url\": \"http://localhost/tasks?page=2\",\n    \"path\": \"http://localhost/tasks\",\n    \"per_page\": 10,\n    \"prev_page_url\": null,\n    \"to\": 10,\n    \"total\": 15\n}\n\n\n\n\nExample 4 (Order by DESC title)\n\n\nEvent\n: User \nGET\n to \n/tasks?order_by=-title\n \n\nHeader Content\n: \nNone\n\n\nBody Content\n: \nNone\n\n\nHTTP Status Code\n: \n200\n\n\nResponse Content\n:\n\n\n{\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": 6,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task\",\n            \"created_at\": \"2019-03-22 15:37:02\",\n            \"updated_at\": \"2019-03-22 15:37:02\"\n        },\n        {\n            \"id\": 7,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 1\",\n            \"created_at\": \"2019-03-22 15:37:05\",\n            \"updated_at\": \"2019-03-22 15:37:05\"\n        },\n        {\n            \"id\": 8,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 12\",\n            \"created_at\": \"2019-03-22 15:37:06\",\n            \"updated_at\": \"2019-03-22 15:37:06\"\n        },\n        {\n            \"id\": 9,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 123\",\n            \"created_at\": \"2019-03-22 15:37:07\",\n            \"updated_at\": \"2019-03-22 15:37:07\"\n        },\n        {\n            \"id\": 10,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 1234\",\n            \"created_at\": \"2019-03-22 15:37:08\",\n            \"updated_at\": \"2019-03-22 15:37:08\"\n        },\n        {\n            \"id\": 11,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 12345\",\n            \"created_at\": \"2019-03-22 15:37:09\",\n            \"updated_at\": \"2019-03-22 15:37:09\"\n        },\n        {\n            \"id\": 12,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 123456\",\n            \"created_at\": \"2019-03-22 15:37:10\",\n            \"updated_at\": \"2019-03-22 15:37:10\"\n        },\n        {\n            \"id\": 13,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 1234567\",\n            \"created_at\": \"2019-03-22 15:37:11\",\n            \"updated_at\": \"2019-03-22 15:37:11\"\n        },\n        {\n            \"id\": 14,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 12345678\",\n            \"created_at\": \"2019-03-22 15:37:12\",\n            \"updated_at\": \"2019-03-22 15:37:12\"\n        },\n        {\n            \"id\": 15,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 123456789\",\n            \"created_at\": \"2019-03-22 15:37:12\",\n            \"updated_at\": \"2019-03-22 15:37:12\"\n        }\n    ],\n    \"first_page_url\": \"http://localhost/tasks?page=1\",\n    \"from\": 1,\n    \"last_page\": 2,\n    \"last_page_url\": \"http://localhost/tasks?page=2\",\n    \"next_page_url\": \"http://localhost/tasks?page=2\",\n    \"path\": \"http://localhost/tasks\",\n    \"per_page\": 10,\n    \"prev_page_url\": null,\n    \"to\": 10,\n    \"total\": 15\n}\n\n\n\n\nValidations\n\n\nHTTP Status Code\n: \n400\n  \n\n\n\n\n\n\n\n\nContent\n\n\nDetail\n\n\n\n\n\n\n\n\n\n\norder_by\n: The selected order by is invalid.\n\n\nIt only allows title, -title, description, -description",
+            "title": "Get all"
+        },
+        {
+            "location": "/tasks/get_all/#get-all-tasks",
+            "text": "Permission level  URL  Method  Format  HTTP Status Code      User  /tasks  GET  json  200   400",
+            "title": "Get All - /tasks"
+        },
+        {
+            "location": "/tasks/get_all/#headers",
+            "text": "Field  Content      Content-Type  application/json    Authorization  Bearer  {token}",
+            "title": "Headers"
+        },
+        {
+            "location": "/tasks/get_all/#query-string",
+            "text": "Field  Allow Value      title  Anyone    description  Anyone    order_by  title, -title, description, -description",
+            "title": "Query String"
+        },
+        {
+            "location": "/tasks/get_all/#example-1-simple-get",
+            "text": "Event : User  GET  to  /tasks  Header Content :  None  Body Content :  None  HTTP Status Code :  200  Response Content :  {\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": 15,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 123456789\",\n            \"created_at\": \"2019-03-22 15:37:12\",\n            \"updated_at\": \"2019-03-22 15:37:12\"\n        },\n        {\n            \"id\": 14,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 12345678\",\n            \"created_at\": \"2019-03-22 15:37:12\",\n            \"updated_at\": \"2019-03-22 15:37:12\"\n        },\n        {\n            \"id\": 13,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 1234567\",\n            \"created_at\": \"2019-03-22 15:37:11\",\n            \"updated_at\": \"2019-03-22 15:37:11\"\n        },\n        {\n            \"id\": 12,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 123456\",\n            \"created_at\": \"2019-03-22 15:37:10\",\n            \"updated_at\": \"2019-03-22 15:37:10\"\n        },\n        {\n            \"id\": 11,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 12345\",\n            \"created_at\": \"2019-03-22 15:37:09\",\n            \"updated_at\": \"2019-03-22 15:37:09\"\n        },\n        {\n            \"id\": 10,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 1234\",\n            \"created_at\": \"2019-03-22 15:37:08\",\n            \"updated_at\": \"2019-03-22 15:37:08\"\n        },\n        {\n            \"id\": 9,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 123\",\n            \"created_at\": \"2019-03-22 15:37:07\",\n            \"updated_at\": \"2019-03-22 15:37:07\"\n        },\n        {\n            \"id\": 8,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 12\",\n            \"created_at\": \"2019-03-22 15:37:06\",\n            \"updated_at\": \"2019-03-22 15:37:06\"\n        },\n        {\n            \"id\": 7,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 1\",\n            \"created_at\": \"2019-03-22 15:37:05\",\n            \"updated_at\": \"2019-03-22 15:37:05\"\n        },\n        {\n            \"id\": 6,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task\",\n            \"created_at\": \"2019-03-22 15:37:02\",\n            \"updated_at\": \"2019-03-22 15:37:02\"\n        }\n    ],\n    \"first_page_url\": \"http://localhost/tasks?page=1\",\n    \"from\": 1,\n    \"last_page\": 2,\n    \"last_page_url\": \"http://localhost/tasks?page=2\",\n    \"next_page_url\": \"http://localhost/tasks?page=2\",\n    \"path\": \"http://localhost/tasks\",\n    \"per_page\": 10,\n    \"prev_page_url\": null,\n    \"to\": 10,\n    \"total\": 15\n}",
+            "title": "Example 1 (Simple GET)"
+        },
+        {
+            "location": "/tasks/get_all/#example-2-filter-by-title",
+            "text": "Event : User  GET  to  /tasks?title=T\u00edtulo 312345  Header Content :  None  Body Content :  None  HTTP Status Code :  200  Response Content :  {\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": 15,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 123456789\",\n            \"created_at\": \"2019-03-22 15:37:12\",\n            \"updated_at\": \"2019-03-22 15:37:12\"\n        },\n        {\n            \"id\": 14,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 12345678\",\n            \"created_at\": \"2019-03-22 15:37:12\",\n            \"updated_at\": \"2019-03-22 15:37:12\"\n        },\n        {\n            \"id\": 13,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 1234567\",\n            \"created_at\": \"2019-03-22 15:37:11\",\n            \"updated_at\": \"2019-03-22 15:37:11\"\n        },\n        {\n            \"id\": 12,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 123456\",\n            \"created_at\": \"2019-03-22 15:37:10\",\n            \"updated_at\": \"2019-03-22 15:37:10\"\n        },\n        {\n            \"id\": 11,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 12345\",\n            \"created_at\": \"2019-03-22 15:37:09\",\n            \"updated_at\": \"2019-03-22 15:37:09\"\n        },\n        {\n            \"id\": 10,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 1234\",\n            \"created_at\": \"2019-03-22 15:37:08\",\n            \"updated_at\": \"2019-03-22 15:37:08\"\n        },\n        {\n            \"id\": 9,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 123\",\n            \"created_at\": \"2019-03-22 15:37:07\",\n            \"updated_at\": \"2019-03-22 15:37:07\"\n        },\n        {\n            \"id\": 8,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 12\",\n            \"created_at\": \"2019-03-22 15:37:06\",\n            \"updated_at\": \"2019-03-22 15:37:06\"\n        },\n        {\n            \"id\": 7,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 1\",\n            \"created_at\": \"2019-03-22 15:37:05\",\n            \"updated_at\": \"2019-03-22 15:37:05\"\n        },\n        {\n            \"id\": 6,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task\",\n            \"created_at\": \"2019-03-22 15:37:02\",\n            \"updated_at\": \"2019-03-22 15:37:02\"\n        }\n    ],\n    \"first_page_url\": \"http://localhost/tasks?page=1\",\n    \"from\": 1,\n    \"last_page\": 1,\n    \"last_page_url\": \"http://localhost/tasks?page=1\",\n    \"next_page_url\": null,\n    \"path\": \"http://localhost/tasks\",\n    \"per_page\": 10,\n    \"prev_page_url\": null,\n    \"to\": 10,\n    \"total\": 10\n}",
+            "title": "Example 2 (Filter by title)"
+        },
+        {
+            "location": "/tasks/get_all/#example-3-filter-by-description",
+            "text": "Event : User  GET  to  /tasks?description=Descri\u00e7\u00e3o da task 12345678   Header Content :  None  Body Content :  None  HTTP Status Code :  200  Response Content :  {\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": 14,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 12345678\",\n            \"created_at\": \"2019-03-22 15:37:12\",\n            \"updated_at\": \"2019-03-22 15:37:12\"\n        }\n    ],\n    \"first_page_url\": \"http://localhost/tasks?page=1\",\n    \"from\": 1,\n    \"last_page\": 1,\n    \"last_page_url\": \"http://localhost/tasks?page=1\",\n    \"next_page_url\": null,\n    \"path\": \"http://localhost/tasks\",\n    \"per_page\": 10,\n    \"prev_page_url\": null,\n    \"to\": 1,\n    \"total\": 1\n}",
+            "title": "Example 3 (Filter by description)"
+        },
+        {
+            "location": "/tasks/get_all/#example-3-order-by-asc-title",
+            "text": "Event : User  GET  to  /tasks?order_by=title   Header Content :  None  Body Content :  None  HTTP Status Code :  200  Response Content :  {\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"T\u00edtulo 3\",\n            \"description\": \"Descri\u00e7\u00e3o da task\",\n            \"created_at\": \"2019-03-22 15:36:51\",\n            \"updated_at\": \"2019-03-22 15:36:51\"\n        },\n        {\n            \"id\": 2,\n            \"title\": \"T\u00edtulo 31\",\n            \"description\": \"Descri\u00e7\u00e3o da task\",\n            \"created_at\": \"2019-03-22 15:36:58\",\n            \"updated_at\": \"2019-03-22 15:36:58\"\n        },\n        {\n            \"id\": 3,\n            \"title\": \"T\u00edtulo 312\",\n            \"description\": \"Descri\u00e7\u00e3o da task\",\n            \"created_at\": \"2019-03-22 15:36:59\",\n            \"updated_at\": \"2019-03-22 15:36:59\"\n        },\n        {\n            \"id\": 4,\n            \"title\": \"T\u00edtulo 3123\",\n            \"description\": \"Descri\u00e7\u00e3o da task\",\n            \"created_at\": \"2019-03-22 15:37:00\",\n            \"updated_at\": \"2019-03-22 15:37:00\"\n        },\n        {\n            \"id\": 5,\n            \"title\": \"T\u00edtulo 31234\",\n            \"description\": \"Descri\u00e7\u00e3o da task\",\n            \"created_at\": \"2019-03-22 15:37:01\",\n            \"updated_at\": \"2019-03-22 15:37:01\"\n        },\n        {\n            \"id\": 6,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task\",\n            \"created_at\": \"2019-03-22 15:37:02\",\n            \"updated_at\": \"2019-03-22 15:37:02\"\n        },\n        {\n            \"id\": 7,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 1\",\n            \"created_at\": \"2019-03-22 15:37:05\",\n            \"updated_at\": \"2019-03-22 15:37:05\"\n        },\n        {\n            \"id\": 8,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 12\",\n            \"created_at\": \"2019-03-22 15:37:06\",\n            \"updated_at\": \"2019-03-22 15:37:06\"\n        },\n        {\n            \"id\": 9,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 123\",\n            \"created_at\": \"2019-03-22 15:37:07\",\n            \"updated_at\": \"2019-03-22 15:37:07\"\n        },\n        {\n            \"id\": 10,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 1234\",\n            \"created_at\": \"2019-03-22 15:37:08\",\n            \"updated_at\": \"2019-03-22 15:37:08\"\n        }\n    ],\n    \"first_page_url\": \"http://localhost/tasks?page=1\",\n    \"from\": 1,\n    \"last_page\": 2,\n    \"last_page_url\": \"http://localhost/tasks?page=2\",\n    \"next_page_url\": \"http://localhost/tasks?page=2\",\n    \"path\": \"http://localhost/tasks\",\n    \"per_page\": 10,\n    \"prev_page_url\": null,\n    \"to\": 10,\n    \"total\": 15\n}",
+            "title": "Example 3 (Order by ASC title)"
+        },
+        {
+            "location": "/tasks/get_all/#example-4-order-by-desc-title",
+            "text": "Event : User  GET  to  /tasks?order_by=-title   Header Content :  None  Body Content :  None  HTTP Status Code :  200  Response Content :  {\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": 6,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task\",\n            \"created_at\": \"2019-03-22 15:37:02\",\n            \"updated_at\": \"2019-03-22 15:37:02\"\n        },\n        {\n            \"id\": 7,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 1\",\n            \"created_at\": \"2019-03-22 15:37:05\",\n            \"updated_at\": \"2019-03-22 15:37:05\"\n        },\n        {\n            \"id\": 8,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 12\",\n            \"created_at\": \"2019-03-22 15:37:06\",\n            \"updated_at\": \"2019-03-22 15:37:06\"\n        },\n        {\n            \"id\": 9,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 123\",\n            \"created_at\": \"2019-03-22 15:37:07\",\n            \"updated_at\": \"2019-03-22 15:37:07\"\n        },\n        {\n            \"id\": 10,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 1234\",\n            \"created_at\": \"2019-03-22 15:37:08\",\n            \"updated_at\": \"2019-03-22 15:37:08\"\n        },\n        {\n            \"id\": 11,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 12345\",\n            \"created_at\": \"2019-03-22 15:37:09\",\n            \"updated_at\": \"2019-03-22 15:37:09\"\n        },\n        {\n            \"id\": 12,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 123456\",\n            \"created_at\": \"2019-03-22 15:37:10\",\n            \"updated_at\": \"2019-03-22 15:37:10\"\n        },\n        {\n            \"id\": 13,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 1234567\",\n            \"created_at\": \"2019-03-22 15:37:11\",\n            \"updated_at\": \"2019-03-22 15:37:11\"\n        },\n        {\n            \"id\": 14,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 12345678\",\n            \"created_at\": \"2019-03-22 15:37:12\",\n            \"updated_at\": \"2019-03-22 15:37:12\"\n        },\n        {\n            \"id\": 15,\n            \"title\": \"T\u00edtulo 312345\",\n            \"description\": \"Descri\u00e7\u00e3o da task 123456789\",\n            \"created_at\": \"2019-03-22 15:37:12\",\n            \"updated_at\": \"2019-03-22 15:37:12\"\n        }\n    ],\n    \"first_page_url\": \"http://localhost/tasks?page=1\",\n    \"from\": 1,\n    \"last_page\": 2,\n    \"last_page_url\": \"http://localhost/tasks?page=2\",\n    \"next_page_url\": \"http://localhost/tasks?page=2\",\n    \"path\": \"http://localhost/tasks\",\n    \"per_page\": 10,\n    \"prev_page_url\": null,\n    \"to\": 10,\n    \"total\": 15\n}",
+            "title": "Example 4 (Order by DESC title)"
+        },
+        {
+            "location": "/tasks/get_all/#validations",
+            "text": "HTTP Status Code :  400        Content  Detail      order_by : The selected order by is invalid.  It only allows title, -title, description, -description",
+            "title": "Validations"
+        },
+        {
+            "location": "/tasks/get_one/",
+            "text": "Get All - \n/tasks/{id}\n\n\n\n\n\n\n\n\nPermission level\n\n\nURL\n\n\nMethod\n\n\nFormat\n\n\nHTTP Status Code\n\n\n\n\n\n\n\n\n\n\nUser\n\n\n/tasks/{id}\n\n\nGET\n\n\njson\n\n\n200\n, \n404\n\n\n\n\n\n\n\n\nHeaders\n\n\n\n\n\n\n\n\nField\n\n\nContent\n\n\n\n\n\n\n\n\n\n\nContent-Type\n\n\napplication/json\n\n\n\n\n\n\nAuthorization\n\n\nBearer \n{token}\n\n\n\n\n\n\n\n\nExample\n\n\nEvent\n: User \nGET\n to \n/tasks\n\n\nHeader Content\n: \nNone\n\n\nBody Content\n: \nNone\n\n\nHTTP Status Code\n: \n200\n\n\nResponse Content\n:\n\n\n{\n    \"id\": 1,\n    \"title\": \"Rerum maxime quas ut et et molestiae.\",\n    \"description\": \"Nam amet ullam nulla facere fugiat omnis ut sint. Odit odio velit quibusdam ea.\",\n    \"created_at\": \"2019-03-10 04:05:05\",\n    \"updated_at\": \"2019-03-10 04:05:05\"\n}\n\n\n\n\nValidations\n\n\nHTTP Status Code\n: \n404\n  \n\n\n\n\n\n\n\n\nContent\n\n\nDetail\n\n\n\n\n\n\n\n\n\n\nid\n: The task does not exists\n\n\nThe task was not found in the database",
+            "title": "Get one"
+        },
+        {
+            "location": "/tasks/get_one/#get-all-tasksid",
+            "text": "Permission level  URL  Method  Format  HTTP Status Code      User  /tasks/{id}  GET  json  200 ,  404",
+            "title": "Get All - /tasks/{id}"
+        },
+        {
+            "location": "/tasks/get_one/#headers",
+            "text": "Field  Content      Content-Type  application/json    Authorization  Bearer  {token}",
+            "title": "Headers"
+        },
+        {
+            "location": "/tasks/get_one/#example",
+            "text": "Event : User  GET  to  /tasks  Header Content :  None  Body Content :  None  HTTP Status Code :  200  Response Content :  {\n    \"id\": 1,\n    \"title\": \"Rerum maxime quas ut et et molestiae.\",\n    \"description\": \"Nam amet ullam nulla facere fugiat omnis ut sint. Odit odio velit quibusdam ea.\",\n    \"created_at\": \"2019-03-10 04:05:05\",\n    \"updated_at\": \"2019-03-10 04:05:05\"\n}",
+            "title": "Example"
+        },
+        {
+            "location": "/tasks/get_one/#validations",
+            "text": "HTTP Status Code :  404        Content  Detail      id : The task does not exists  The task was not found in the database",
+            "title": "Validations"
+        },
+        {
+            "location": "/tasks/update/",
+            "text": "Update - \n/tasks/{id}\n\n\n\n\n\n\n\n\nPermission level\n\n\nURL\n\n\nMethod\n\n\nFormat\n\n\nHTTP Status Code\n\n\n\n\n\n\n\n\n\n\nUser\n\n\n/tasks/{id}\n\n\nPATCH\n\n\njson\n\n\n202\n, \n400\n\n\n\n\n\n\n\n\nHeaders\n\n\n\n\n\n\n\n\nField\n\n\nContent\n\n\n\n\n\n\n\n\n\n\nContent-Type\n\n\napplication/json\n\n\n\n\n\n\nAuthorization\n\n\nBearer \n{token}\n\n\n\n\n\n\n\n\nRequest Content\n\n\n\n\n\n\n\n\nField\n\n\nType\n\n\nRequired\n\n\nDetail\n\n\n\n\n\n\n\n\n\n\ntitle\n\n\nString\n\n\nNo\n\n\nTask's title\n\n\n\n\n\n\ndescription\n\n\nString\n\n\nNo\n\n\nTask's description\n\n\n\n\n\n\n\n\nResponse Content\n\n\n\n\n\n\n\n\nField\n\n\nType\n\n\nDetail\n\n\n\n\n\n\n\n\n\n\nid\n\n\nInteger\n\n\nTask's id\n\n\n\n\n\n\ntitle\n\n\nString\n\n\nTask's title\n\n\n\n\n\n\ndescription\n\n\nString\n\n\nTask's description\n\n\n\n\n\n\ncreated_at\n\n\nString\n\n\nTask's created_at\n\n\n\n\n\n\nupdated_at\n\n\nString\n\n\nTask's updated_at\n\n\n\n\n\n\n\n\nExample\n\n\nEvent\n: User \nPATCH\n to \n/tasks/12\n\n\nHeader Content\n:\n\n\nContent-Type: application/json\nAuthorization: Bearer {token}\n\n\n\n\nBody Content\n:\n\n\n{\n    \"title\": \"This is a title\",\n    \"description\": \"This is a descrip\n}\n\n\n\n\nHTTP Status Code\n: \n202\n\n\nResponse Content\n:\n\n\n{\n    \"title\": \"This is a title\",\n    \"description\": \"This is a description\",\n    \"updated_at\": \"2019-03-10 14:21:17\",\n    \"created_at\": \"2019-03-11 14:21:17\",\n    \"id\": 12\n}\n\n\n\n\nValidations\n\n\nHTTP Status Code\n: \n400\n  \n\n\n\n\n\n\n\n\nContent\n\n\nDetail\n\n\n\n\n\n\n\n\n\n\ntitle\n: The title may not be greater than 50 characters.\n\n\nIt titles can't have a string greater than 50 characters\n\n\n\n\n\n\ndescription\n: The description may not be greater than 255 characters.\n\n\nIt descriptions can't have a string greater than 255 characters",
+            "title": "Update"
+        },
+        {
+            "location": "/tasks/update/#update-tasksid",
+            "text": "Permission level  URL  Method  Format  HTTP Status Code      User  /tasks/{id}  PATCH  json  202 ,  400",
+            "title": "Update - /tasks/{id}"
+        },
+        {
+            "location": "/tasks/update/#headers",
+            "text": "Field  Content      Content-Type  application/json    Authorization  Bearer  {token}",
+            "title": "Headers"
+        },
+        {
+            "location": "/tasks/update/#request-content",
+            "text": "Field  Type  Required  Detail      title  String  No  Task's title    description  String  No  Task's description",
+            "title": "Request Content"
+        },
+        {
+            "location": "/tasks/update/#response-content",
+            "text": "Field  Type  Detail      id  Integer  Task's id    title  String  Task's title    description  String  Task's description    created_at  String  Task's created_at    updated_at  String  Task's updated_at",
+            "title": "Response Content"
+        },
+        {
+            "location": "/tasks/update/#example",
+            "text": "Event : User  PATCH  to  /tasks/12  Header Content :  Content-Type: application/json\nAuthorization: Bearer {token}  Body Content :  {\n    \"title\": \"This is a title\",\n    \"description\": \"This is a descrip\n}  HTTP Status Code :  202  Response Content :  {\n    \"title\": \"This is a title\",\n    \"description\": \"This is a description\",\n    \"updated_at\": \"2019-03-10 14:21:17\",\n    \"created_at\": \"2019-03-11 14:21:17\",\n    \"id\": 12\n}",
+            "title": "Example"
+        },
+        {
+            "location": "/tasks/update/#validations",
+            "text": "HTTP Status Code :  400        Content  Detail      title : The title may not be greater than 50 characters.  It titles can't have a string greater than 50 characters    description : The description may not be greater than 255 characters.  It descriptions can't have a string greater than 255 characters",
+            "title": "Validations"
+        }
+    ]
+}
